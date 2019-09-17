@@ -1,0 +1,336 @@
+#index{
+  background: linear-gradient(to right, #2aca1b, #ceec24, #e6260dcc); 
+}
+ 
+ #card{
+     margin-top: 25%;
+ }
+ 
+ #cardm{
+   margin-top: 12%;
+}
+ .title >h1 {
+    text-align: center;
+    font-family: 'Designil Font', sans-serif;
+    font-size: 28px;
+    color: rgb(19, 14, 14);
+ }
+
+ .title >p {
+    text-align: center;
+    font-family: 'Designil Font', sans-serif;
+    font-size: 15px;
+    color: rgb(126, 125, 125);
+ }
+
+ #forgot{
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 13px;
+   color: #072a24;
+ }
+
+ #sing{
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 13px;
+   color: #e93737; 
+ }
+
+ #large--cta_login {
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   background : #072a24;
+
+  }
+
+ #outline_login {
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   background : #0f456e;
+
+  }
+ 
+  #outline1_login {
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   background : #fe929f;
+
+  }
+
+  /* ----------------------------------------------------- */
+
+  #reg{
+   background: linear-gradient(to right, #2aca1b, #ceec24, #e6260dcc); 
+   
+  }
+
+  #re{
+    margin-top: 3%;
+}
+
+  .title_re >h3 {
+    text-align: center;
+    font-family: 'Designil Font', sans-serif;
+    font-size:20px;
+    color: rgb(19, 14, 14);
+ }
+ 
+ .title_re >p {
+    text-align: center;
+    font-family: 'Designil Font', sans-serif;
+    font-size: 13px;
+    color: rgb(126, 125, 125);
+ }
+   
+  
+
+  #large--cta_re{
+   font-family: 'Designil Font', sans-serif;
+   background: #0f456e;
+  }
+
+ /* ----------------------------------------------------- */
+
+ #food{
+   background: rgba(44, 223, 104, 0.842);
+   background: -webkit-linear-gradient(to right, rgb(34, 192, 42), rgb(25, 223, 18)); 
+   background: linear-gradient(to right, rgb(39, 197, 18), rgb(13, 182, 111)); 
+ }
+
+ #card_food{
+   font-family: 'Designil Font', sans-serif;
+   margin-top: 7%;
+   height: 10%;
+   width: 80%;
+
+}
+
+#back{
+   margin-top: 2%;
+}
+
+.center >h1{
+   margin-top: 1%;
+   font-family: 'Roboto', sans-serif;
+   font-size: 22px; 
+}
+
+.card__contentcard--material__content {
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 15px;
+   color: #050505;
+}
+
+#foodc{
+   font-family: 'Designil Font', sans-serif;
+   font-size: 15px;
+   color: #0c7222;
+}
+
+#foodmore {
+   font-family: 'Designil Font', sans-serif;
+   font-size: 15px;
+   color: #dfece9;
+}
+
+
+.more  {
+   text-align: center;
+   font-size: 40x;
+}
+
+
+#menu{
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 20px;
+}
+
+/* ----------------------------------------------------- */
+
+#order{
+   background: linear-gradient(to right, #2aca1b, #ceec24, #e6260dcc);  
+}
+
+#cardorder{
+   margin-top: 15%;
+}
+
+.titleorder >h1 {
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 20px;
+   color: rgb(19, 14, 14);
+}
+
+.titleorder >p {
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 17px;
+   color: rgb(126, 125, 125);
+}
+
+#ิborderorder {
+   font-family: 'Designil Font', sans-serif;
+   font-size: 18px;
+   color: #959696;
+}
+
+#twoorder {
+   font-family: 'Designil Font', sans-serif;
+   font-size: 16px;
+   color: #0a8f37;
+}
+
+
+#cardt{
+   font-family: 'Designil Font', sans-serif;
+   font-size: 16px;
+   background: #f7f0f0;
+   height: 10%;
+}
+
+#carde{
+   font-family: 'Designil Font', sans-serif;
+   font-size: 18px;
+   height: 10%;
+}
+#credit{
+   padding: 2%;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 15px;
+   color: #000;
+   background: #d87518;
+}
+
+#paypal{
+   padding: 2%;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 15px;
+   color: #000;
+   background: #0fbd74;
+}
+
+#cash{
+   padding: 2%;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 15px;
+   color: #000;
+   background: #82c407;
+}
+
+#cancle{
+   font-size: 15px;
+   color: rgb(194, 34, 34)
+}
+
+
+/* ----------------------------------------------------- */
+
+#res{
+   background: linear-gradient(to right, #2aca1b, #ceec24, #e6260dcc); 
+ }
+
+#card_menu{
+   margin-top: 11%;
+}
+
+.title_menu >h1 {
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 18px;
+   color: rgb(19, 14, 14);
+}
+
+.title_menu >p {
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 15px;
+   color: rgb(126, 125, 125);
+}
+
+.sta{
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 20px;
+   background: #0a9696;
+   
+}
+
+.lmenu >h1 {
+   text-align: left;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 13px;
+   color: rgb(3, 3, 3);
+}
+
+.lmenu >p {
+   text-align: left;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 11px;
+   color: #13cc13;
+}
+
+.mains{
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 15px;
+   background: #ffafbd;
+}
+
+
+#drinks{
+   font-family: 'Designil Font', sans-serif;
+   font-size: 18px;
+   color: rgb(255, 254, 254);
+   background: rgb(8, 138, 41);
+}
+
+#desserts{
+   font-family: 'Designil Font', sans-serif;
+   font-size: 18px;
+   color: rgb(255, 255, 255);
+   background: rgb(8, 138, 41);
+}
+
+/* ----------------------------------------------------- */
+
+#resturanlist{
+   background: #FF512F;
+   background: -webkit-linear-gradient(to right, #F09819, #FF512F); 
+   background: linear-gradient(to right, #F09819, #FF512F); 
+ }
+
+#card_list{
+   margin-top: 12%;
+}
+
+.title_list >h1 {
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 15px;
+   color: rgb(19, 14, 14);
+}
+
+.title_list >p {
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   font-size: 12px;
+   color: rgb(126, 125, 125);
+}
+
+#more1{
+   font-size: 13px;
+   color: #F09819
+
+}
+
+
+
+
+ 
+
+
+  
