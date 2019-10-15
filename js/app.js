@@ -8,7 +8,7 @@ var firebaseConfig = {
     appId: "1:543852763810:web:28e5fb536995261bcd55fb",
     measurementId: "G-NKTZL9F88H"
   };
-  // Initialize Firebase
+
   firebase.initializeApp(firebaseConfig);
 
    var db = firebase.firestore();
@@ -41,6 +41,18 @@ document.addEventListener('init', function (event) {
 
     if (page.id === "sidemenu") {
         //Code for sidemenu
+
+        $("#logout").click(function () {
+            //firebase sign out
+            firebase.auth().signOut().then(function() {
+              // Sign-out successful.
+              $("#content")[0].load("login.html");  
+              $("#sidemenu")[0].close();   
+            }).catch(function(error) {
+              // An error happened.
+              console.log(error.message);
+            });
+          });
         
     $("#login").click(function () {
         $("#content")[0].load("login.html");  
@@ -50,8 +62,9 @@ document.addEventListener('init', function (event) {
         $("#home").click(function () {
             var content = document.getElementById('content');
             var menu = document.getElementById('menu');
-            content.load('index.html')
+            content.load('index.html')            
                 .then(menu.close.bind(menu));
+                $("#sidemenu")[0].close();   
         });
   
     }
