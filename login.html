@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
     <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
     <link href="https://fonts.googleapis.com/css?family=Chilanka&display=swap" rel="stylesheet">
+    
 </head>
 
 <body id="index">
@@ -30,18 +31,18 @@
             <ons-list>
                 <span>
                     <div style="padding: 4%" align='center'>
-                        <input class="text-input text-input--material" placeholder="Email" type="text" required>
+                        <input class="text-input text-input--material" id="username" placeholder="Email" type="text" required>
                     </div>
                     <br />
                     <div align='center'>
-                        <input class="text-input text-input--material "placeholder="Password" type="password" required>
+                        <input class="text-input text-input--material " id="password"  placeholder="Password" type="password" required>
                     </div>
                 </span>
             </ons-list>
 
             <ons-row><ons-col width="100%">
                     <br>
-                    <ons-button modifier="large--cta" id="large--cta_login" onclick="validate()" >Login</ons-button>
+                    <ons-button modifier="large--cta" id="signinbtn" >Sign in</ons-button>
 
                 </ons-col>
                                
@@ -52,8 +53,8 @@
 
                 
             </ons-row>
-
-
+<center>
+or</center>
             <br>
 
             <ons-row>
@@ -80,9 +81,7 @@
 
 </body>
 <script>
-        function validate() {
-            window.location.href = "index.html";
-        }
+        
 
         function validate1() {
             window.location.href = "signup.html";

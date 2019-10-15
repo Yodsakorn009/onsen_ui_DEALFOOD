@@ -1,3 +1,20 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyB8DLmN_Jt83kKk1DddsjRzb4k0WOun03Y",
+    authDomain: "deal-food.firebaseapp.com",
+    databaseURL: "https://deal-food.firebaseio.com",
+    projectId: "deal-food",
+    storageBucket: "deal-food.appspot.com",
+    messagingSenderId: "698439684492",
+    appId: "1:698439684492:web:f68a5e596deb986360c6a9",
+    measurementId: "G-MLYZ9HKFQM"
+  };
+  // Initialize Firebase
+//   firebase.initializeApp(firebaseConfig);
+
+//   var db = firebase.firestore();
+
+  
+
 document.addEventListener('init', function (event) {
     var page = event.target;
     console.log(page.id);
