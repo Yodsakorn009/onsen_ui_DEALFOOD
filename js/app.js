@@ -1,16 +1,17 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyB8DLmN_Jt83kKk1DddsjRzb4k0WOun03Y",
-    authDomain: "deal-food.firebaseapp.com",
-    databaseURL: "https://deal-food.firebaseio.com",
-    projectId: "deal-food",
-    storageBucket: "deal-food.appspot.com",
-    messagingSenderId: "698439684492",
-    appId: "1:698439684492:web:f68a5e596deb986360c6a9",
+    apiKey: "AIzaSyCUiwtRUD9RdLqH4KmStlHrccUiqYynaZQ",
+    authDomain: "dealfood-ae8f9.firebaseapp.com",
+    databaseURL: "https://dealfood-ae8f9.firebaseio.com",
+    projectId: "dealfood-ae8f9",
+    storageBucket: "dealfood-ae8f9.appspot.com",
+    messagingSenderId: "543852763810",
+    appId: "1:543852763810:web:28e5fb536995261bcd55fb",
+    measurementId: "G-NKTZL9F88H"
   };
-//   Initialize Firebase
- firebase.initializeApp(firebaseConfig);
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
- var db = firebase.firestore();
+   var db = firebase.firestore();
 
   // ดูสถานะการ login
 firebase.auth().onAuthStateChanged(function(user) {
