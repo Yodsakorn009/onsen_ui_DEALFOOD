@@ -6,13 +6,24 @@ var firebaseConfig = {
     storageBucket: "deal-food.appspot.com",
     messagingSenderId: "698439684492",
     appId: "1:698439684492:web:f68a5e596deb986360c6a9",
-    measurementId: "G-MLYZ9HKFQM"
   };
-  // Initialize Firebase
-//   firebase.initializeApp(firebaseConfig);
+//   Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
 
-//   var db = firebase.firestore();
+ var db = firebase.firestore();
 
+  // ดูสถานะการ login
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+
+      var email = user.email;
+      console.log(email + "signed in");
+  
+    } else {
+      console.log("sign out");
+   
+    }
+  });
   
 
 document.addEventListener('init', function (event) {
@@ -29,6 +40,12 @@ document.addEventListener('init', function (event) {
 
     if (page.id === "sidemenu") {
         //Code for sidemenu
+        
+    $("#login").click(function () {
+        $("#content")[0].load("login.html");  
+        $("#sidemenu")[0].close();   
+      }); 
+
         $("#home").click(function () {
             var content = document.getElementById('content');
             var menu = document.getElementById('menu');
@@ -37,6 +54,23 @@ document.addEventListener('init', function (event) {
         });
   
     }
+    if (page.id === 'loginPage') {
+        console.log("loginPage");
+    
+        $("#signinbtn").click(function(){
+          var username = $("#username").val();
+          var password = $("#password").val();
+          firebase.auth().signInWithEmailAndPassword(username, password).catch(function(error) {
+    
+            console.log(error.message);
+          });
+    
+        })
+    
+        $("#backhomebtn").click(function () {
+          $("#content")[0].load("home.html");      
+        });
+      }
 
     
 

@@ -1,91 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Deal Food</title>
-
-    <script src="lib/onsen/js/onsenui.js"></script>
-    <script src="lib/jquery/jquery-3.4.1.min.js"></script>
-    <link rel="stylesheet" href="css.css">
-    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
-    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
-    <link href="https://fonts.googleapis.com/css?family=Chilanka&display=swap" rel="stylesheet">
-    
-</head>
-
-<body id="index">
-
-    <ons-card id="card">
-<div class="title" align='center'>
-
-<img src="http://images6.fanpop.com/image/photos/41200000/Eagle-Logo-Template-Black-and-White-Free-Vector-PNG-Graphic-Cave-the-supremes-41232250-1200-628.png" alt="Onsen UI" style="width:80%">
-
-<h1>LOGIN</h1>
-            <p>Insert your email and password to login</p>
+<ons-page id="loginPage">
+        <div style="text-align: center; margin-top: 30px;">
+            <img src="http://images6.fanpop.com/image/photos/41200000/Eagle-Logo-Template-Black-and-White-Free-Vector-PNG-Graphic-Cave-the-supremes-41232250-1200-628.png" alt="Onsen UI" style="width: 60%">
+            <div class="title" style="text-align: center;">
+                <h3>Sign in</h3>
+            </div>
+            <div class="content">
+                <div style="text-align: center; margin-top: 30px;">
+                    <p>
+                        <ons-input id="username" modifier="underbar" placeholder="Username"></ons-input>
+                    </p>
+                    <p>
+                        <ons-input id="password" modifier="underbar" type="password" placeholder="Password">
+                        </ons-input>
+                    </p>
+                    <p style="margin-top: 30px;">
+                        <ons-button id="signinbtn">Sign in</ons-button>
+                    </p>
+                    <p style="margin-top: 30px;color: blue">
+                        <h4>Or sign in with</h4>
+                        <ons-row>
+                            <ons-col>
+                                <img src="https://firebasestorage.googleapis.com/v0/b/deal-food.appspot.com/o/ggsignin.png?alt=media&token=ed430a64-693a-4bfa-b49c-0c96cdf5a210" alt="Onsen UI" style="width: 90%">
+                            </ons-col>
+                        </ons-row>
+                        <ons-row>
+                            <ons-col>
+                                <img src="https://firebasestorage.googleapis.com/v0/b/deal-food.appspot.com/o/fbsignin.png?alt=media&token=92eafdb4-297e-4697-969d-2a4a3a2a2383" alt="Onsen UI" style="width: 90%">
+                            </ons-col>
+                        </ons-row>
+                        <ons-row style="margin-top: 30px;color:navy">
+                            <ons-col>                            
+                                <div id="backhomebtn"><ons-icon icon="fa-arrow-left"></ons-icon> Back to Homepage</div>  
+                            </ons-col>
+                        </ons-row>
+                    </p>
+                </div>
+            </div>
         </div>
-
-        <div>
-            <ons-list>
-                <span>
-                    <div style="padding: 4%" align='center'>
-                        <input class="text-input text-input--material" id="username" placeholder="Email" type="text" required>
-                    </div>
-                    <br />
-                    <div align='center'>
-                        <input class="text-input text-input--material " id="password"  placeholder="Password" type="password" required>
-                    </div>
-                </span>
-            </ons-list>
-
-            <ons-row><ons-col width="100%">
-                    <br>
-                    <ons-button modifier="large--cta" id="signinbtn" >Sign in</ons-button>
-
-                </ons-col>
-                               
-                <ons-col class="one_index" width="100%" ><center>
-                    <ons-button id="sing" modifier="quiet" onclick="validate1()" >
-                        Sign up
-                </ons-col></center>
-
-                
-            </ons-row>
-<center>
-or</center>
-            <br>
-
-            <ons-row>
-                <ons-col width="50%">
-                    <ons-card >
-                        <center>
-                            <ons-toolbar-button onclick="validate()"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
-                                    alt="Onsen UI" style="width: 25%"></ons-toolbar-button>
-                        </center>
-                    </ons-card>
-                </ons-col>
-
-                <ons-col width="50%">
-                    <ons-card >
-                        <center>
-                            <ons-toolbar-button onclick="validate()"><img src="data:image/png;base64,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"
-                                    alt="Onsen UI" style="width: 30%"></ons-toolbar-button>
-                        </center>
-                    </ons-card>
-                </ons-col>
-            </ons-row>
-
-            
-
-</body>
-<script>
-        
-
-        function validate1() {
-            window.location.href = "signup.html";
-        }
-    </script>
-
-</html>
+    </ons-page>

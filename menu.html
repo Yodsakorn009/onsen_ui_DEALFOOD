@@ -1,17 +1,20 @@
 <ons-page id="sidemenu">
     <ons-list-title>Main Menu</ons-list-title>
     <ons-list id="links">
-        <ons-list-item id="login" onclick="login()" tappable >
-            Login
+        <ons-list-item tappable style="cursor: pointer" modifier="longdivider chevron"
+        >
+                 <div class="center" id="login">
+            Sign in
+          </div>
         </ons-list-item>
-        <ons-list-item id="alltbtn" onclick="ALL_Menu()" tappable>
+        <ons-list-item tappable style="cursor: pointer" modifier="longdivider chevron" id="alltbtn" onclick="ALL_Menu()" tappable>
             ALL Menu
         </ons-list-item>
-        <ons-list-item id="streetbtn" onclick="Order_All()" tappable>
+        <ons-list-item tappable style="cursor: pointer" modifier="longdivider chevron"id="streetbtn" onclick="Order_All()" tappable>
            Order All
         </ons-list-item>
            </ons-list-item>
-        <ons-list-item id="logoutbtn" onclick="logout()" tappable>
+        <ons-list-item tappable style="cursor: pointer" modifier="longdivider chevron" id="logoutbtn" onclick="logout()" tappable>
             Logout
         </ons-list-item>
 
@@ -19,9 +22,7 @@
 
     <body>
         <script>
-            function login() {
-              window.location.href='login.html'
-            }
+          
             function ALL_Menu() {
               window.location.href='more.html'
             }
