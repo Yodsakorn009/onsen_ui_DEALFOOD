@@ -73,13 +73,13 @@ document.addEventListener('init', function (event) {
     $("#signinbtn").click(function () {
       var username = $("#username").val();
       var password = $("#password").val();
-      firebase.auth().signInWithEmailAndPassword(username, password)
+      firebase.auth().signInWithEmailAndPassword(username, password).then(function(result){
 
       content.load('Home.html')
         .then(menu.close.bind(menu))
 
 
-        .catch(function (error) {
+       }) .catch(function (error) {
 
           console.log(error.message);
 
@@ -87,10 +87,10 @@ document.addEventListener('init', function (event) {
         });
 
     })
-
-    $("#backhomebtn").click(function () {
+$("#backhomebtn").click(function () {
       $("#content")[0].load("home.html");
     });
+    
   }
 
 
