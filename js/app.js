@@ -80,8 +80,8 @@ document.addEventListener('init', function (event) {
 
 
        }) .catch(function (error) {
-
-          console.log(error.message);
+          
+          alert('Try Again');
 
 
         });
