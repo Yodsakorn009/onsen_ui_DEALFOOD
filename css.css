@@ -105,6 +105,13 @@
    width: 80%;
 
 }
+#card_re{
+   font-family: 'Designil Font', sans-serif;
+   margin-top: 3%;
+   height: 10%;
+   width: 90%;
+
+}
 
 #back{
    margin-top: 2%;
@@ -114,6 +121,12 @@
    margin-top: 1%;
    font-family: 'Roboto', sans-serif;
    font-size: 22px; 
+}
+.card__re {
+   text-align: center;
+   font-family: 'Designil Font', sans-serif;
+   font-size:20px;
+   color: #050505;
 }
 
 .card__contentcard--material__content {
