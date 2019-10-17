@@ -12,28 +12,18 @@
         </div>
         <div class="center">Deal food</div>
     </ons-toolbar>
-
     <ons-scroller>
-        <div style="padding-top: 10px; text-align: center; ">
-            <label class="radio-button radio-button--material" style="width: 30%" id="menu">
-                <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
-                <div class="radio-button__checkmark radio-button--material__checkmark"></div>
-                Delivery
-            </label>
-    
-            <label class="radio-button radio-button--material" style="width: 30%" id="menu">
-                <input type="radio" class="radio-button__input radio-button--material__input" name="r">
-                <div class="radio-button__checkmark radio-button--material__checkmark"></div>
-                Pickup
-            </label>
-        </div>
-        <div class="content" style="text-align: center;">
-                <div class="recomended">
-                    <h4>Recomended</h4>
-                    <ons-carousel auto-scroll auto-scroll-ratio="0.5" auto-refresh swipeable overscrollable item-width="130px"
-                        class="recomended_list" id="carousel">
-                                   </ons-carousel>
-                </div>
+            <p style="text-align: center; margin-top: 3px; margin-bottom: 3px;">
+                    <ons-search-input placeholder="Food or Restuarant">
+                    </ons-search-input>
+                </p>            
+                <div class="content" style="text-align: center;">
+                    <div class="recomended">
+                        <h4>Recomended</h4>
+                        <ons-carousel auto-scroll auto-scroll-ratio="0.5" auto-refresh swipeable overscrollable item-width="130px"
+                            class="recomended_list" id="carousel">
+                         </ons-carousel>
+                    </div>
     <center>
         <ons-card id="card_food">
             <div>

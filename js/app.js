@@ -9,7 +9,7 @@ var firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
- var db = firebase.firestore();
+var db = firebase.firestore();
 
 
 
@@ -36,8 +36,7 @@ document.addEventListener('init', function (event) {
     $("#menubtn").click(function () {
       var menu = document.getElementById('menu');
       menu.open();
-    });
-
+    }); 
     $("#carousel").empty();
     db.collection("recommended").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
@@ -53,8 +52,19 @@ document.addEventListener('init', function (event) {
 
 
       });
-    });
+    });  db.collection("recommended").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+          console.log(`${doc.id} => ${doc.data()}`);
+          console.log(doc.data().name);
+          console.log(doc.data().id);
+          console.log(doc.data().photoUrl);
+      });
+  });
+
   }
+    
+  
+   
 
   if (page.id === "sidemenu") {
     //Code for sidemenu
