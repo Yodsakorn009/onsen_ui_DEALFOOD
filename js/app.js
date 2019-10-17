@@ -31,12 +31,57 @@ document.addEventListener('init', function (event) {
   var page = event.target;
   console.log(page.id);
 
+
+
+  
+  if (page.id === "more") {
+    //Code for tabbar
+    $("#menubtn").click(function () {
+      var menu = document.getElementById('menu');
+      menu.open();
+    });
+
+     
+    
+        $("#mf").empty();
+        db.collection("home").get().then((querySnapshot) => {
+          var item
+          querySnapshot.forEach((doc) => {
+              
+          item = `  
+          <ons-card id="foodc">
+          <center>
+            <ons-toolbar-button  onclick="validate5()"><img src="${doc.data().photoUrl}" alt="Onsen UI"
+                    style="width: 90%"></ons-toolbar-button>
+                    <div>${doc.data().name}</div>
+                  
+             </center>
+             </ons-card>
+           `
+             
+           
+      $("#mf").append(item);
+          });
+        
+        });    
+    
+  }
+
   if (page.id === "home") {
     //Code for tabbar
     $("#menubtn").click(function () {
       var menu = document.getElementById('menu');
       menu.open();
-    }); 
+    });
+    $("#foodmore").click(function () {
+      var content = document.getElementById('content');
+      var menu = document.getElementById('menu');
+      content.load('more.html')
+        .then(menu.close.bind(menu));
+     
+    });
+
+
     $("#carousel").empty();
     db.collection("recommended").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
@@ -97,6 +142,15 @@ document.addEventListener('init', function (event) {
         // An error happened.
         console.log(error.message);
       });
+    });
+ 
+    //Code for tabbar
+    $("#more").click(function () {
+      var content = document.getElementById('content');
+      var menu = document.getElementById('menu');
+      content.load('more.html')
+        .then(menu.close.bind(menu));
+     
     });
 
     $("#login").click(function () {
