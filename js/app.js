@@ -47,20 +47,34 @@ document.addEventListener('init', function (event) {
             </div>
             <div class="recomended_item_title" id="item1_name">${doc.data().name}</div>
         </ons-carousel-item>`
-
+        
         $("#carousel").append(item);
 
-
       });
-    });  db.collection("recommended").get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-          console.log(`${doc.id} => ${doc.data()}`);
-          console.log(doc.data().name);
-          console.log(doc.data().id);
-          console.log(doc.data().photoUrl);
-      });
-  });
-
+    });     
+    
+        $("#mf").empty();
+        db.collection("home").get().then((querySnapshot) => {
+          var item
+          querySnapshot.forEach((doc) => {
+              
+          item = `  <ons-col  width="50%">
+          <ons-card id="foodc">
+          <center>
+            <ons-toolbar-button  onclick="validate5()"><img src="${doc.data().photoUrl}" alt="Onsen UI"
+                    style="width: 90%"></ons-toolbar-button>
+                    <div>${doc.data().name}</div>
+                  
+             </center>
+             </ons-card>
+             </ons-col>`
+             
+           
+      $("#mf").append(item);
+          });
+        
+        });    
+    
   }
     
   
