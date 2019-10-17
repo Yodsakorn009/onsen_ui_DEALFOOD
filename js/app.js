@@ -74,20 +74,19 @@ document.addEventListener('init', function (event) {
       var username = $("#username").val();
       var password = $("#password").val();
       firebase.auth().signInWithEmailAndPassword(username, password).then(function(result){
-
+       
       content.load('Home.html')
         .then(menu.close.bind(menu))
 
 
        }) .catch(function (error) {
 
-          console.log(error.message);
-
+           alert("Try Again");
 
         });
 
     })
-    $("#signup").click(function () {
+      $("#signup").click(function () {
       $("#content")[0].load("signup.html");
     });
 
