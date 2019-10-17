@@ -68,7 +68,7 @@ document.addEventListener('init', function (event) {
 
   }
   if (page.id === 'loginPage') {
-    console.log("loginPage");
+    
 
     $("#signinbtn").click(function () {
       var username = $("#username").val();
@@ -87,12 +87,45 @@ document.addEventListener('init', function (event) {
         });
 
     })
-$("#backhomebtn").click(function () {
+    $("#signup").click(function () {
+      $("#content")[0].load("signup.html");
+    });
+
+
+
+      $("#backhomebtn").click(function () {
       $("#content")[0].load("home.html");
     });
     
   }
+  if (page.id === 'signupPage') {
+  
+    $("#createbtn").click(function () {
+     
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+              firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+              // Handle Errors here.
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              
+              if(errorCode === 'auth/weak-password'){
+                alert(errorMessage);
+                          
+              }              
+              else if(errorCode == 'auth/invalid-email'){
+                alert(errorMessage);
+              }
+              console.log(error);
+              
+          }
+          );
+          
+       
+        });
 
-
-
+        $("#backhomebtn").click(function () {
+          $("#content")[0].load("login.html");
+        });
+  }
 });
