@@ -143,6 +143,15 @@ document.addEventListener('init', function (event) {
         console.log(error.message);
       });
     });
+
+    
+    $("#cls").click(function () {
+      var content = document.getElementById('content');
+      var menu = document.getElementById('menu');
+      content.load('home.html')
+        .then(menu.close.bind(menu));
+     
+    });
  
     //Code for tabbar
     $("#more").click(function () {
