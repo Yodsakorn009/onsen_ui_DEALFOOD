@@ -11,9 +11,7 @@ firebase.initializeApp(firebaseConfig);
 
 var db = firebase.firestore();
 
-
-
-// ดูสถานะการ login
+//ดูสถานะการ login
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
 
