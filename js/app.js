@@ -205,7 +205,6 @@ document.addEventListener('init', function (event) {
   if (page.id === 'signupPage') {
   
     $("#createbtn").click(function () {
-     
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
               firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
@@ -223,6 +222,7 @@ document.addEventListener('init', function (event) {
               console.log(error);
               
           }
+          
           );
           
        
