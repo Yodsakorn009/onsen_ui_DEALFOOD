@@ -123,6 +123,7 @@ document.addEventListener('init', function (event) {
         </ons-carousel-item>`
 
         $("#carosel").append(item);
+        
 
        
       });
