@@ -77,14 +77,47 @@ document.addEventListener('init', function (event) {
 
     });
 
+    $("#pizza").click(function () {
+      localStorage.setItem("selectedCategory", "004");
+      $("#content")[0].load("list.html");
+    });
+    $("#Fast").click(function () {
+      localStorage.setItem("selectedCategory", "001");
+      $("#content")[0].load("list.html");
+    });
 
+   
+    $("#Thai").click(function () {
+      localStorage.setItem("selectedCategory", "005");
+      $("#content")[0].load("list.html");
+    });
+
+   
+    $("#Drink").click(function () {
+      localStorage.setItem("selectedCategory", "002");
+      $("#content")[0].load("list.html");
+    });
+
+   
+    $("#Vegeterian").click(function () {
+      localStorage.setItem("selectedCategory", "006");
+      $("#content")[0].load("list.html");
+    });
+
+   
+    $("#Noodle").click(function () {
+      localStorage.setItem("selectedCategory", "003");
+      $("#content")[0].load("list.html");
+    });
+
+   
     $("#carose").empty();
     db.collection("home").get().then((querySnapshot) => {
       var item
       querySnapshot.forEach((doc) => {
 
       item = `<ons-carousel-item modifier="nodivider" id="${doc.data().id}" class="recomended_item">
-        <ons-toolbar-button  onclick="validate5()"><img src="${doc.data().photoUrl}" alt="Onsen UI"
+        <ons-toolbar-button "><img src="${doc.data().photoUrl}" alt="Onsen UI"
                     style="width: 90%"></ons-toolbar-button>
                     <div>${doc.data().name}</div>
         </ons-carousel-item>`
@@ -94,33 +127,38 @@ document.addEventListener('init', function (event) {
        
       });
     });
-
-    $("#mf").empty();
-    db.collection("home").get().then((querySnapshot) => {
-      var item
-      querySnapshot.forEach((doc) => {
-
-        item = `  <ons-col  width="50%">
-          <ons-card id="foodc">
-          <center>
-            <ons-toolbar-button  onclick="validate5()"><img src="${doc.data().photoUrl}" alt="Onsen UI"
-                    style="width: 90%"></ons-toolbar-button>
-                    <div>${doc.data().name}</div>
-                  
-             </center>
-             </ons-card>
-             </ons-col>`
-
-
-        $("#mf").append(item);
-      });
-
-    });
-
   }
 
 
+  if (page.id === 'list') {
+    var id = localStorage.getItem("selectedCategory");
+    console.log("categoryPage:" + id);
+    $("#menubtn").click(function () {
+      var menu = document.getElementById('menu');
+      menu.open();
+    });
+    
+    $("#show").empty();
+    db.collection("home").where("id", "==",  id).get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        var item = `<ons-col  width="100%">
+        <ons-card id="foodc">
+        <center>
+          <ons-toolbar-button "><img src="${doc.data().photoUrl}" alt="Onsen UI"
+                  style="width: 90%"></ons-toolbar-button>
+                  <div>${doc.data().name}</div>
+                
+           </center>
+           </ons-card>
+           </ons-col>`
+        $("#show").append(item);
+        console.log(doc.data().name);
+        
+      });
+    });
 
+  }
 
   if (page.id === "sidemenu") {
     //Code for sidemenu
