@@ -24,6 +24,10 @@ firebase.auth().onAuthStateChanged(function (user) {
   }
 });
 
+function loadShopDetail() {
+  window.location.href='order.html'
+}
+
 
 document.addEventListener('init', function (event) {
   var page = event.target;
@@ -146,7 +150,7 @@ document.addEventListener('init', function (event) {
         var item = `<ons-col  width="100%">
         <ons-card id="foodc">
         <center>
-          <ons-toolbar-button "><img src="${doc.data().photoUrl}" alt="Onsen UI"
+          <ons-toolbar-button onclick="loadShopDetail()"><img src="${doc.data().photoUrl}" alt="Onsen UI"
                   style="height: 120px"></ons-toolbar-button>
                   <div>${doc.data().name}</div>
                 
