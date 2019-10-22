@@ -121,7 +121,7 @@ document.addEventListener('init', function (event) {
       querySnapshot.forEach((doc) => {
 
       item = `<ons-carousel-item modifier="nodivider" id="${doc.data().id}" class="recomended_item">
-        <ons-toolbar-button "><img src="${doc.data().photoUrl}" alt="Onsen UI"
+        <ons-toolbar-button onclick="loadShopDetail()"><img src="${doc.data().photoUrl}" alt="Onsen UI"
                     style="height: 80px"></ons-toolbar-button>
                     <div>${doc.data().name}</div>
         </ons-carousel-item>`

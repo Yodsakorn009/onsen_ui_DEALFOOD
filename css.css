@@ -360,3 +360,15 @@
    display: table;
    background-color: rgba(0, 0, 0, 0.42);
 }
+#home .page__background {
+   background-color: rgba(69, 236, 222, 0.842);
+}
+#list .page__background {
+   background-color: rgba(69, 236, 222, 0.842);
+}
+#loginPage .page__background {
+   background-color: rgba(45, 227, 240, 0.795);
+}
+#signupPage .page__background {
+   background-color: rgba(15, 166, 226, 0.829);
+}
