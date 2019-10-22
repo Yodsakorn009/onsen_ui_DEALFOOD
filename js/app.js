@@ -220,7 +220,7 @@ document.addEventListener('init', function (event) {
         var token = result.credential.accessToken;
         // The signed-in user info.
         var user = result.user;
-        content.load('Home.html')
+        content.load('home.html')
         // ...
       }).catch(function(error) {
         // Handle Errors here.
@@ -239,7 +239,7 @@ document.addEventListener('init', function (event) {
       var password = $("#password").val();
       firebase.auth().signInWithEmailAndPassword(username, password).then(function (result) {
 
-        content.load('Home.html')
+        content.load('home.html')
           .then(menu.close.bind(menu))
 
 
@@ -270,7 +270,7 @@ document.addEventListener('init', function (event) {
       var password = document.getElementById('password').value;
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function (result) {
 
-        content.load('Home.html')
+        content.load('home.html')
           .then(menu.close.bind(menu))
 
 
