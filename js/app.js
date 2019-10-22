@@ -112,13 +112,13 @@ document.addEventListener('init', function (event) {
 
    
     $("#carose").empty();
-    db.collection("home").get().then((querySnapshot) => {
+    db.collection("recommended").get().then((querySnapshot) => {
       var item
       querySnapshot.forEach((doc) => {
 
       item = `<ons-carousel-item modifier="nodivider" id="${doc.data().id}" class="recomended_item">
         <ons-toolbar-button "><img src="${doc.data().photoUrl}" alt="Onsen UI"
-                    style="width: 90%"></ons-toolbar-button>
+                    style="height: 80px"></ons-toolbar-button>
                     <div>${doc.data().name}</div>
         </ons-carousel-item>`
 
@@ -133,28 +133,28 @@ document.addEventListener('init', function (event) {
 
   if (page.id === 'list') {
     var id = localStorage.getItem("selectedCategory");
-    console.log("categoryPage:" + id);
+    
     $("#menubtn").click(function () {
       var menu = document.getElementById('menu');
       menu.open();
     });
     
     $("#show").empty();
-    db.collection("home").where("id", "==",  id).get()
+    db.collection("recommended").where("id", "==",  id).get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         var item = `<ons-col  width="100%">
         <ons-card id="foodc">
         <center>
           <ons-toolbar-button "><img src="${doc.data().photoUrl}" alt="Onsen UI"
-                  style="width: 90%"></ons-toolbar-button>
+                  style="height: 120px"></ons-toolbar-button>
                   <div>${doc.data().name}</div>
                 
            </center>
            </ons-card>
            </ons-col>`
         $("#show").append(item);
-        console.log(doc.data().name);
+       
         
       });
     });
